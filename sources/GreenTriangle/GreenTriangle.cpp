@@ -1025,7 +1025,7 @@ public:
         std::vector<vec3> shadowTriangles = extractWorldTriangles(renderables);
         std::cout << "Total triangles for shadow: " << shadowTriangles.size() / 3 << std::endl;
         shaderProgram.Use(); // Shader program
-        shaderProgram.setUniform(true, "u_debugShadow");
+        shaderProgram.setUniform(false, "u_debugShadow");
         int maxTriangles = 256;
         int triangleCount = fmin<int>(shadowTriangles.size() / 3, maxTriangles);
 
